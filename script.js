@@ -40,7 +40,7 @@ function storeItem1() {
 function storeItem2() {
     if (clickCount > 299) {
         clickCount = clickCount - 300
-        autoClickerRate += 0.025
+        autoClickerRate += 0.05
     }
 }
 
