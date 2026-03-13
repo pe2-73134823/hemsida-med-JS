@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS clicker</title>
+</head>
+<body>
+    <button id="clicker" onclick="clicked()"></button>
+    <p id="counter">Clicks: 0</p>
+    <div class="spacer"></div>
+    <div id="shop">
+        <button onclick="storeItem1()"><b>Manual multiplier</b></button>
+        <button onclick="storeItem2()"><b>Simple autoclicker</b></button>
+        <button onclick="storeItem3()"><b>Everything multiplier</b></button>
+    </div>
+    <button id="openSettings" onclick="openSettings()"></button>
+
+    <div id="settings">
+        <button id="close" onclick="closeSettings()"></button>
+        <button style="background-color: rgb(128, 0, 0);" onclick="resetSave()">Reset progress</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
