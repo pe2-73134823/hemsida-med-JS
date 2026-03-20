@@ -7,9 +7,9 @@ body {
 }
 #clicker {
     margin-top: 20px;
-    background-image: url(assets/js-icon.webp);
+    background-image: url(assets/circle-plus-solid-full.svg);
     background-size: contain;
-    border-radius: 10px;
+    border-radius: 1000px;
     width: 300px;
     height: 300px;
     cursor: pointer;
