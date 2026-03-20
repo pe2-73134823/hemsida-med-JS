@@ -8,18 +8,19 @@
 </head>
 <body>
     <button id="clicker" onclick="clicked()"></button>
-    <p id="counter">Clicks: 0</p>
+    <p id="counter">$0</p>
     <div class="spacer"></div>
     <div id="shop">
-        <button onclick="storeItem1()"><b>25 - Manual multiplier</b></button>
-        <button onclick="storeItem2()"><b>75 - Simple autoclicker</b></button>
-        <button onclick="storeItem3()"><b>150 - Total multiplier</b></button>
+        <button id="storeItem1" onclick="storeItem1()"><b>25 - Manual multiplier</b></button>
+        <button id="storeItem2" onclick="storeItem2()"><b>75 - Simple autoclicker</b></button>
+        <button id="storeItem3" onclick="storeItem3()"><b>150 - Total multiplier</b></button>
     </div>
     <button id="openSettings" onclick="openSettings()"></button>
 
     <div id="settings">
         <button id="close" onclick="closeSettings()"></button>
-        <button style="background-color: rgb(128, 0, 0);" onclick="resetSave()">Reset progress</button>
+        <button id="langbutton" onclick="changeLanguage()"><img src="assets/flags/Flag_of_Sweden.svg" height="10px"> Change language</button>
+        <button id="resetbutton" style="background-color: rgb(128, 0, 0);" onclick="resetSave()">Reset progress</button>
     </div>
 
     <script src="script.js"></script>

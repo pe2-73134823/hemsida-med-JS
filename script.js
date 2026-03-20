@@ -13,14 +13,17 @@ let totalMult = 0;
 totalMult = firstload(totalMult, "totalMult");
 
 // onload
-counter.textContent = "Clicks: " + clickCount
+if (localStorage.getItem("lang") == "swe") {
+    swedishInit();
+}
+counter.textContent = "$" + clickCount
 setInterval(gameTick, 50);
 setInterval(saveTick, 10000);
 
 // main game
 function gameTick() {
     clickCount += (autoClickerRate * (totalMult + 1))
-    counter.textContent = "Clicks: " + parseInt(clickCount)
+    counter.textContent = "$" + parseInt(clickCount)
 }
 function saveTick() {
     localStorage.setItem('clickCount', clickCount);
@@ -30,7 +33,7 @@ function saveTick() {
 }
 function clicked() {
     clickCount = clickCount + 1 * (manualClickMult + 1)
-    counter.textContent = "Clicks: " + parseInt(clickCount)
+    counter.textContent = "$" + parseInt(clickCount)
 }
 
 // store
@@ -53,7 +56,6 @@ function storeItem3() {
     }
 }
 
-
 // settings
 const settings = document.getElementById("settings")
 function openSettings() {
@@ -68,6 +70,16 @@ function resetSave() {
         location.reload();
     }
 }
+function changeLanguage() {
+    if (localStorage.getItem("lang") == "swe") {
+        localStorage.removeItem("lang");
+        englishInit();
+    } else {
+        localStorage.setItem("lang", "swe")
+        swedishInit();
+    }
+    
+}
 
 // loading functions
 function firstload(runName, storedName) {
@@ -77,4 +89,18 @@ function firstload(runName, storedName) {
     }
     runName = parseFloat(localStorage.getItem(storedName));
     return(runName);
+}
+function englishInit() {
+    document.getElementById("storeItem1").innerHTML = "<b>25 - Manual multiplier</b>";
+    document.getElementById("storeItem2").innerHTML = "<b>75 - Simple autoclicker</b>";
+    document.getElementById("storeItem3").innerHTML = "<b>150 - Total multiplier</b>";
+    document.getElementById("langbutton").innerHTML = '<img src="assets/flags/Flag_of_Sweden.svg" height="10px"> Change language';
+    document.getElementById("resetbutton").innerHTML = "Reset progress";
+}
+function swedishInit() {
+    document.getElementById("storeItem1").innerHTML = "<b>25 - Manual multiplicerare</b>";
+    document.getElementById("storeItem2").innerHTML = "<b>75 - Automatisk click</b>";
+    document.getElementById("storeItem3").innerHTML = "<b>150 - Total multiplicerare</b>";
+    document.getElementById("langbutton").innerHTML = '<img src="assets/flags/English_language.svg" height="10px"> Byt språk';
+    document.getElementById("resetbutton").innerHTML = "Återställ spelet";
 }
