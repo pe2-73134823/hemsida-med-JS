@@ -19,7 +19,7 @@ setInterval(saveTick, 10000);
 
 // main game
 function gameTick() {
-    clickCount += (autoClickerRate * totalMult)
+    clickCount += (autoClickerRate * (totalMult + 1))
     counter.textContent = "Clicks: " + parseInt(clickCount)
 }
 function saveTick() {
@@ -43,7 +43,7 @@ function storeItem1() {
 function storeItem2() {
     if (clickCount > 74) {
         clickCount = clickCount - 75
-        autoClickerRate += 0.06
+        autoClickerRate += 0.05
     }
 }
 function storeItem3() {
