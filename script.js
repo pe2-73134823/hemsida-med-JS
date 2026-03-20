@@ -1,5 +1,4 @@
 // get elements
-const clicker = document.getElementById("clicker");
 const counter = document.getElementById("counter");
 
 // value load
@@ -16,7 +15,6 @@ totalMult = firstload(totalMult, "totalMult");
 if (localStorage.getItem("lang") == "swe") {
     swedishInit();
 }
-counter.textContent = "$" + clickCount
 setInterval(gameTick, 50);
 setInterval(saveTick, 10000);
 
