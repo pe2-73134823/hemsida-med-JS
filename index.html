@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <meta name=description content="A simple clicker game made in JavaScript!">
     <title>JS clicker</title>
 </head>
 <body>
-    <button id="clicker" onclick="clicked()"></button>
+    <button id="clicker" onclick="clicked()" role="main" title="Clicker"></button>
     <p id="counter">$0</p>
     <div class="spacer"></div>
     <div id="shop">
@@ -15,10 +16,10 @@
         <button id="storeItem2" onclick="storeItem2()"><b>75 - Simple autoclicker</b></button>
         <button id="storeItem3" onclick="storeItem3()"><b>150 - Total multiplier</b></button>
     </div>
-    <button id="openSettings" onclick="openSettings()"></button>
+    <button id="openSettings" onclick="openSettings()" title="Open settings menu"></button>
 
     <div id="settings">
-        <button id="close" onclick="closeSettings()"></button>
+        <button id="close" onclick="closeSettings()" title="Close settings menu"></button>
         <button id="langbutton" onclick="changeLanguage()"><img src="assets/flags/Flag_of_Sweden.svg" height="10px"> Change language</button>
         <button id="resetbutton" style="background-color: rgb(128, 0, 0);" onclick="resetSave()">Reset progress</button>
     </div>
